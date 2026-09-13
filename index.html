@@ -4,48 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Metal Matrimony | Welding, Fabrication & Engineering</title>
+<title>Metal Matrimony | Welding & Fabrication Kenya</title>
 
-<meta name="description" content="Metal Matrimony offers professional welding, metal fabrication, custom furniture, shop and office counters, repairs and engineering-based fabrication solutions.">
+<meta name="description" content="Metal Matrimony provides professional welding, fabrication, custom metal furniture, shop and office counters, repairs and engineering-based fabrication solutions.">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
+    background: #080808;
     color: #ffffff;
     line-height: 1.6;
 }
 
 header {
-    background: #050505;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: #050505;
     border-bottom: 1px solid #333;
+    padding: 17px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: bold;
     color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 18px;
     font-size: 14px;
 }
 
@@ -53,27 +56,32 @@ nav a:hover {
     color: #d4af37;
 }
 
+section {
+    padding: 75px 7%;
+}
+
 .hero {
     min-height: 90vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 60px 20px;
     background:
-        linear-gradient(rgba(0,0,0,.78), rgba(0,0,0,.85)),
-        radial-gradient(circle at center, #333, #050505 70%);
+        linear-gradient(rgba(0,0,0,.80), rgba(0,0,0,.90)),
+        radial-gradient(circle, #444, #050505 70%);
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 950px;
 }
 
 .hero h1 {
-    font-size: clamp(40px, 8vw, 75px);
     color: #d4af37;
+    font-size: clamp(42px, 8vw, 78px);
+    line-height: 1.1;
     margin-bottom: 15px;
-    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .hero h2 {
@@ -82,9 +90,9 @@ nav a:hover {
 }
 
 .hero p {
-    color: #ddd;
-    max-width: 750px;
+    max-width: 800px;
     margin: auto;
+    color: #ddd;
     font-size: 18px;
 }
 
@@ -95,7 +103,7 @@ nav a:hover {
 .btn {
     display: inline-block;
     padding: 14px 25px;
-    margin: 7px;
+    margin: 6px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -108,38 +116,36 @@ nav a:hover {
 }
 
 .gold:hover {
-    background: #f0cf55;
+    background: #f1d263;
     transform: translateY(-2px);
 }
 
-.dark-btn {
+.outline {
     border: 1px solid #d4af37;
     color: #d4af37;
 }
 
-.dark-btn:hover {
+.outline:hover {
     background: #d4af37;
     color: #000;
 }
 
-section {
-    padding: 70px 7%;
-}
-
-.section-title {
+.title {
     text-align: center;
     margin-bottom: 45px;
 }
 
-.section-title h2 {
-    font-size: 35px;
+.title h2 {
     color: #d4af37;
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin-bottom: 8px;
 }
 
-.section-title p {
-    color: #bbb;
+.title p {
+    color: #aaa;
 }
+
+/* ABOUT */
 
 .about {
     background: #111;
@@ -152,14 +158,16 @@ section {
 }
 
 .about-content p {
-    margin-bottom: 18px;
     color: #ddd;
+    margin-bottom: 18px;
 }
 
-.highlight {
+.gold-text {
     color: #d4af37;
     font-weight: bold;
 }
+
+/* SERVICES */
 
 .services {
     background: #080808;
@@ -174,8 +182,8 @@ section {
 .service {
     background: #151515;
     border: 1px solid #292929;
-    padding: 28px;
     border-radius: 10px;
+    padding: 28px;
     transition: .3s;
 }
 
@@ -186,12 +194,14 @@ section {
 
 .service h3 {
     color: #d4af37;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .service p {
     color: #ccc;
 }
+
+/* ENGINEERING */
 
 .engineering {
     background: #101010;
@@ -200,31 +210,33 @@ section {
 .engineering-box {
     max-width: 1000px;
     margin: auto;
-    background: #161616;
     padding: 35px;
+    background: #181818;
     border-left: 4px solid #d4af37;
     border-radius: 8px;
 }
 
 .engineering-box h3 {
     color: #d4af37;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
 .engineering-box p {
     color: #ddd;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-.engineering-list {
-    margin-top: 20px;
-    padding-left: 20px;
+.engineering-box ul {
+    padding-left: 25px;
 }
 
-.engineering-list li {
-    margin-bottom: 10px;
+.engineering-box li {
     color: #ddd;
+    margin-bottom: 10px;
 }
+
+/* PRODUCTS */
 
 .products {
     background: #080808;
@@ -232,113 +244,144 @@ section {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
 .product {
     background: #151515;
+    border: 1px solid #292929;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid #292929;
 }
 
-.product-image {
-    height: 200px;
-    background: linear-gradient(135deg, #252525, #090909);
+.product-photo {
+    height: 210px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #777;
-    font-size: 15px;
+    align-items: center;
     text-align: center;
+    color: #888;
+    background:
+        linear-gradient(135deg, #333, #080808);
     padding: 20px;
 }
 
-.product-info {
-    padding: 22px;
+.product-content {
+    padding: 23px;
 }
 
-.product-info h3 {
+.product h3 {
     color: #d4af37;
-    margin-bottom: 8px;
+    font-size: 21px;
 }
 
-.product-info p {
+.product p {
     color: #bbb;
+    margin-top: 8px;
     font-size: 14px;
 }
 
 .price {
     color: #fff;
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
-    margin: 15px 0;
+    margin: 18px 0 10px;
 }
 
-.contact {
+/* WHY US */
+
+.why {
     background: #111;
 }
 
-.contact-box {
-    max-width: 850px;
+.why-grid {
+    max-width: 1000px;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.why-card {
+    background: #181818;
+    padding: 25px;
     text-align: center;
+    border-radius: 8px;
+}
+
+.why-card h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #ccc;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #080808;
+    text-align: center;
+}
+
+.contact-box {
+    max-width: 800px;
+    margin: auto;
 }
 
 .contact-box p {
     color: #ccc;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.contact-details {
+.contact-info {
     margin: 25px 0;
 }
 
-.contact-details div {
-    margin: 10px;
-}
-
-.contact-details strong {
+.contact-info strong {
     color: #d4af37;
 }
 
+/* FOOTER */
+
 footer {
     background: #050505;
+    border-top: 1px solid #222;
     text-align: center;
     padding: 30px 20px;
-    border-top: 1px solid #222;
 }
 
 footer p {
-    color: #999;
+    color: #888;
     font-size: 14px;
+    margin: 5px;
 }
+
+/* WHATSAPP */
 
 .whatsapp {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    width: 58px;
-    height: 58px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background: #25D366;
-    color: white;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 27px;
     font-weight: bold;
-    box-shadow: 0 5px 20px rgba(0,0,0,.5);
     z-index: 2000;
+    box-shadow: 0 5px 20px rgba(0,0,0,.5);
 }
 
-.whatsapp:hover {
-    transform: scale(1.08);
-}
+/* MOBILE */
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
 
     header {
         flex-direction: column;
@@ -346,7 +389,7 @@ footer p {
     }
 
     nav a {
-        margin: 0 7px;
+        margin: 0 5px;
         font-size: 12px;
     }
 
@@ -357,57 +400,63 @@ footer p {
     .engineering-box {
         padding: 25px;
     }
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-<div class="logo">METAL MATRIMONY</div>
+    <div class="logo">
+        METAL MATRIMONY
+    </div>
 
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#engineering">Engineering</a>
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
 </header>
 
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<h1>Metal Matrimony</h1>
+        <h1>METAL MATRIMONY</h1>
 
-<h2>Welding • Fabrication • Engineering-Based Solutions</h2>
+        <h2>Welding • Fabrication • Engineering</h2>
 
-<p>
-Professional metal fabrication focused on strong joints, accurate measurements,
-functional designs and quality finishes. From custom furniture to business
-structures and repairs, we turn ideas into practical metal solutions.
-</p>
+        <p>
+            Professional metal fabrication built around precision,
+            strength, functionality and aesthetics. We transform
+            ideas, measurements and designs into practical metal
+            solutions for homes, offices, shops and businesses.
+        </p>
 
-<div class="buttons">
+        <div class="buttons">
 
-<a href="#products" class="btn gold">
-View Products
-</a>
+            <a href="#products" class="btn gold">
+                VIEW OUR PRODUCTS
+            </a>
 
-<a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20would%20like%20to%20request%20a%20quotation."
-class="btn dark-btn">
-Request a Quote
-</a>
+            <a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20would%20like%20to%20request%20a%20quotation."
+               class="btn outline">
+                REQUEST A QUOTE
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
@@ -416,40 +465,44 @@ Request a Quote
 
 <section id="about" class="about">
 
-<div class="section-title">
+    <div class="title">
 
-<h2>About Metal Matrimony</h2>
+        <h2>About Metal Matrimony</h2>
 
-<p>Precision. Strength. Creativity. Functionality.</p>
+        <p>Where engineering meets craftsmanship.</p>
 
-</div>
+    </div>
 
-<div class="about-content">
+    <div class="about-content">
 
-<p>
-<strong class="highlight">Metal Matrimony</strong> is a welding and fabrication
-brand specializing in custom metalwork, furniture, repairs and practical
-fabrication solutions for homes, businesses and commercial spaces.
-</p>
+        <p>
+            <strong class="gold-text">Metal Matrimony</strong>
+            is a welding, fabrication and custom metalwork business
+            focused on creating strong, functional and aesthetically
+            appealing metal products.
+        </p>
 
-<p>
-Our approach combines hands-on welding and fabrication skills with
-<strong class="highlight">mechanical engineering principles</strong> to develop
-designs that are not only attractive but also practical, stable and suitable
-for their intended use.
-</p>
+        <p>
+            We specialize in custom furniture, shop and office
+            counters, metal frames, gates, railings, repairs,
+            supports and other fabricated structures.
+        </p>
 
-<p>
-Whether you need a custom table, shop counter, office structure, railing,
-metal frame or repair, we focus on accurate measurements, appropriate
-materials, strong joints and quality finishing.
-</p>
+        <p>
+            Our approach combines practical welding and fabrication
+            skills with a <strong class="gold-text">
+            mechanical engineering mindset</strong>, allowing us to
+            consider dimensions, geometry, materials, loads,
+            stability and functionality when developing a project.
+        </p>
 
-<p>
-<strong class="highlight">Quality is our priority.</strong>
-</p>
+        <p>
+            <strong class="gold-text">
+                Quality is our priority.
+            </strong>
+        </p>
 
-</div>
+    </div>
 
 </section>
 
@@ -458,83 +511,69 @@ materials, strong joints and quality finishing.
 
 <section id="services" class="services">
 
-<div class="section-title">
+    <div class="title">
 
-<h2>Our Expertise</h2>
+        <h2>Our Welding & Fabrication Expertise</h2>
 
-<p>Professional fabrication for residential and commercial applications.</p>
+        <p>
+            Custom solutions for residential, commercial and
+            practical fabrication requirements.
+        </p>
 
-</div>
+    </div>
 
-<div class="service-grid">
+    <div class="service-grid">
 
-<div class="service">
+        <div class="service">
+            <h3>Welding</h3>
+            <p>
+                MMA/SMAW welding and general metal joining for
+                frames, supports, furniture, repairs and custom
+                fabrication.
+            </p>
+        </div>
 
-<h3>Welding & Fabrication</h3>
+        <div class="service">
+            <h3>Custom Furniture</h3>
+            <p>
+                Modern metal furniture including tables, shelves,
+                shoe racks, frames and industrial-style designs.
+            </p>
+        </div>
 
-<p>
-MMA/SMAW welding, metal frame fabrication, brackets, supports,
-custom structures and general metalwork.
-</p>
+        <div class="service">
+            <h3>Shop & Office Counters</h3>
+            <p>
+                Custom counters designed around your available
+                space, measurements, layout and business needs.
+            </p>
+        </div>
 
-</div>
+        <div class="service">
+            <h3>Gates & Railings</h3>
+            <p>
+                Fabrication of gates, handrails, guardrails and
+                decorative metal structures.
+            </p>
+        </div>
 
-<div class="service">
+        <div class="service">
+            <h3>Repairs & Modifications</h3>
+            <p>
+                Repairing, reinforcing and modifying damaged or
+                existing metal structures.
+            </p>
+        </div>
 
-<h3>Custom Furniture</h3>
+        <div class="service">
+            <h3>Structural Fabrication</h3>
+            <p>
+                Frames, brackets, supports, trusses and other
+                custom metal components.
+            </p>
+        </div>
 
-<p>
-Modern metal furniture including tables, shelves, shoe racks,
-frames and industrial-style designs.
-</p>
-
-</div>
-
-<div class="service">
-
-<h3>Shop & Office Counters</h3>
-
-<p>
-Custom counters and workstations designed around the dimensions,
-layout and functional requirements of your business.
-</p>
-
-</div>
-
-<div class="service">
-
-<h3>Repairs & Modifications</h3>
-
-<p>
-Repairing damaged metal structures, reinforcing weak sections,
-modifying existing frames and restoring functionality.
-</p>
-
-</div>
-
-<div class="service">
-
-<h3>Gates & Railings</h3>
-
-<p>
-Custom metal gates, handrails, guardrails and other fabricated
-metal structures.
-</p>
-
-</div>
-
-<div class="service">
-
-<h3>Structural Metalwork</h3>
-
-<p>
-Fabrication of frames, supports, brackets, trusses and other
-metal components according to project requirements.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -543,57 +582,93 @@ metal components according to project requirements.
 
 <section id="engineering" class="engineering">
 
-<div class="section-title">
+    <div class="title">
 
-<h2>Engineering-Based Fabrication</h2>
+        <h2>Engineering-Based Fabrication</h2>
 
-<p>Design decisions supported by measurement, calculation and practical engineering principles.</p>
+        <p>
+            We approach fabrication with measurement,
+            calculation and practical engineering principles.
+        </p>
 
-</div>
+    </div>
 
-<div class="engineering-box">
+    <div class="engineering-box">
 
-<h3>More Than Just Welding</h3>
+        <h3>
+            We Don't Just Weld — We Measure, Calculate & Build.
+        </h3>
 
-<p>
-At Metal Matrimony, fabrication begins with understanding what the structure
-needs to do. Before fabrication, dimensions, geometry, material selection,
-loads and practical use can be considered to develop a suitable design.
-</p>
+        <p>
+            A good fabricated structure begins with understanding
+            its purpose. Before fabrication, we consider the
+            required dimensions, geometry, materials, expected
+            use and practical construction requirements.
+        </p>
 
-<p>
-Our mechanical-engineering background helps us approach fabrication problems
-systematically rather than relying only on appearance or guesswork.
-</p>
+        <p>
+            Engineering-based considerations may include:
+        </p>
 
-<ul class="engineering-list">
+        <ul>
 
-<li>Accurate dimensional measurements and layout.</li>
+            <li>
+                Accurate dimensional measurements and layout.
+            </li>
 
-<li>Basic engineering calculations for suitable designs.</li>
+            <li>
+                Geometric calculations for frames, trusses and
+                fabricated structures.
+            </li>
 
-<li>Consideration of loads and forces acting on fabricated structures.</li>
+            <li>
+                Consideration of loads and forces acting on
+                fabricated components.
+            </li>
 
-<li>Material and section selection based on the intended application.</li>
+            <li>
+                Material and section selection according to
+                the intended application.
+            </li>
 
-<li>Geometric calculations for frames, trusses, stairs and other structures.</li>
+            <li>
+                Support-point and stability considerations.
+            </li>
 
-<li>Consideration of stability, support points and practical fabrication.</li>
+            <li>
+                Alignment, squareness, level and positioning.
+            </li>
 
-<li>Weld-joint positioning and appropriate fabrication procedures.</li>
+            <li>
+                Weld-joint positioning and fabrication sequence.
+            </li>
 
-<li>Attention to alignment, squareness, level and overall finish.</li>
+            <li>
+                Practical material utilization and reduction
+                of unnecessary waste.
+            </li>
 
-<li>Design adjustments based on available materials and client requirements.</li>
+            <li>
+                Design adjustments according to client
+                requirements and available materials.
+            </li>
 
-</ul>
+            <li>
+                Functional and aesthetic considerations in
+                the finished product.
+            </li>
 
-<p>
-For projects requiring formal structural certification or specialist
-professional approval, the appropriate licensed professional can be consulted.
-</p>
+        </ul>
 
-</div>
+        <p>
+            Our goal is to combine
+            <strong class="gold-text">
+                strength, functionality, durability and aesthetics
+            </strong>
+            in every suitable project.
+        </p>
+
+    </div>
 
 </section>
 
@@ -602,126 +677,202 @@ professional approval, the appropriate licensed professional can be consulted.
 
 <section id="products" class="products">
 
-<div class="section-title">
+    <div class="title">
 
-<h2>Featured Products</h2>
+        <h2>Featured Products</h2>
 
-<p>Custom designs available according to size, material and finish.</p>
+        <p>
+            Custom designs available according to size,
+            materials and finish.
+        </p>
 
-</div>
+    </div>
 
-<div class="product-grid">
-
-
-<div class="product">
-
-<div class="product-image">
-Your Product Photo
-</div>
-
-<div class="product-info">
-
-<h3>Custom Metal Table</h3>
-
-<p>
-Strong fabricated steel frame suitable for home, office,
-restaurant or commercial use.
-</p>
-
-<div class="price">From KSh 7,000</div>
-
-<a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20am%20interested%20in%20the%20Custom%20Metal%20Table."
-class="btn gold">
-Order Now
-</a>
-
-</div>
-
-</div>
+    <div class="product-grid">
 
 
-<div class="product">
+        <!-- TABLE -->
 
-<div class="product-image">
-Your Product Photo
-</div>
+        <div class="product">
 
-<div class="product-info">
+            <div class="product-photo">
+                YOUR TABLE PHOTO
+            </div>
 
-<h3>Metal Shoe Rack</h3>
+            <div class="product-content">
 
-<p>
-Durable custom-made shoe storage designed for homes,
-offices and commercial spaces.
-</p>
+                <h3>Custom Metal Table</h3>
 
-<div class="price">From KSh 7,000</div>
+                <p>
+                    Strong fabricated steel frame suitable for
+                    homes, offices, restaurants and commercial
+                    spaces.
+                </p>
 
-<a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20am%20interested%20in%20the%20Metal%20Shoe%20Rack."
-class="btn gold">
-Order Now
-</a>
+                <div class="price">
+                    From KSh 7,000
+                </div>
 
-</div>
+                <a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20am%20interested%20in%20the%20Custom%20Metal%20Table."
+                   class="btn gold">
+                    ORDER NOW
+                </a>
 
-</div>
+            </div>
 
-
-<div class="product">
-
-<div class="product-image">
-Your Product Photo
-</div>
-
-<div class="product-info">
-
-<h3>Shop / Office Counter</h3>
-
-<p>
-Custom-fabricated counters designed around your space,
-dimensions and business requirements.
-</p>
-
-<div class="price">Request Quote</div>
-
-<a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20need%20a%20custom%20shop%20or%20office%20counter."
-class="btn gold">
-Request Quote
-</a>
-
-</div>
-
-</div>
+        </div>
 
 
-<div class="product">
+        <!-- SHOE RACK -->
 
-<div class="product-image">
-Your Product Photo
-</div>
+        <div class="product">
 
-<div class="product-info">
+            <div class="product-photo">
+                YOUR SHOE RACK PHOTO
+            </div>
 
-<h3>Custom Metal Furniture</h3>
+            <div class="product-content">
 
-<p>
-Unique metal furniture designed according to your preferred
-dimensions, style and finish.
-</p>
+                <h3>Metal Shoe Rack</h3>
 
-<div class="price">Request Quote</div>
+                <p>
+                    Durable custom-made metal storage designed
+                    for homes, offices and commercial spaces.
+                </p>
 
-<a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20need%20custom%20metal%20furniture."
-class="btn gold">
-Request Quote
-</a>
+                <div class="price">
+                    From KSh 7,000
+                </div>
 
-</div>
+                <a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20am%20interested%20in%20the%20Metal%20Shoe%20Rack."
+                   class="btn gold">
+                    ORDER NOW
+                </a>
 
-</div>
+            </div>
+
+        </div>
 
 
-</div>
+        <!-- COUNTER -->
+
+        <div class="product">
+
+            <div class="product-photo">
+                YOUR COUNTER PHOTO
+            </div>
+
+            <div class="product-content">
+
+                <h3>Shop & Office Counter</h3>
+
+                <p>
+                    Custom-fabricated counters designed around
+                    your space, measurements and business needs.
+                </p>
+
+                <div class="price">
+                    REQUEST QUOTE
+                </div>
+
+                <a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20need%20a%20custom%20shop%20or%20office%20counter."
+                   class="btn gold">
+                    REQUEST QUOTE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTOM FURNITURE -->
+
+        <div class="product">
+
+            <div class="product-photo">
+                YOUR FURNITURE PHOTO
+            </div>
+
+            <div class="product-content">
+
+                <h3>Custom Metal Furniture</h3>
+
+                <p>
+                    Unique metal furniture designed according
+                    to your preferred dimensions, style and finish.
+                </p>
+
+                <div class="price">
+                    REQUEST QUOTE
+                </div>
+
+                <a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20need%20custom%20metal%20furniture."
+                   class="btn gold">
+                    REQUEST QUOTE
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+    <div class="title">
+
+        <h2>Why Choose Metal Matrimony?</h2>
+
+        <p>
+            Built with purpose. Finished with attention to detail.
+        </p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>Precision</h3>
+            <p>
+                Accurate measurements and careful fabrication.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Strong Joints</h3>
+            <p>
+                Attention to joint preparation, welding and finishing.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Custom Designs</h3>
+            <p>
+                Designs adapted to your space and requirements.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Engineering Thinking</h3>
+            <p>
+                Practical calculations and engineering principles
+                guide suitable designs.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <h3>Quality</h3>
+            <p>
+                Focus on durable, functional and attractive work.
+            </p>
+        </div>
+
+    </div>
 
 </section>
 
@@ -730,70 +881,71 @@ Request Quote
 
 <section id="contact" class="contact">
 
-<div class="section-title">
+    <div class="title">
 
-<h2>Let's Build Something</h2>
+        <h2>Start Your Project</h2>
 
-<p>
-Have an idea? Send us your measurements, design or requirements
-and let's discuss your project.
-</p>
+        <p>
+            Have an idea? Tell us what you want to build and
+            let's discuss your project.
+        </p>
 
-</div>
+    </div>
 
-<div class="contact-box">
+    <div class="contact-box">
 
-<div class="contact-details">
+        <div class="contact-info">
 
-<div>
-<strong>Phone / WhatsApp:</strong>
-0701355748
-</div>
+            <p>
+                <strong>Phone / WhatsApp:</strong>
+                0701355748
+            </p>
 
-<div>
-<strong>Email:</strong>
-walcotjayson04@gmail.com
-</div>
+            <p>
+                <strong>Email:</strong>
+                walcotjayson04@gmail.com
+            </p>
 
-<div>
-<strong>Instagram:</strong>
-@metalmatrimony
-</div>
+            <p>
+                <strong>Instagram:</strong>
+                @metalmatrimony
+            </p>
 
-</div>
+        </div>
 
-<a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20would%20like%20to%20discuss%20a%20fabrication%20project."
-class="btn gold">
-Chat With Metal Matrimony
-</a>
+        <a href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20would%20like%20to%20discuss%20a%20fabrication%20project."
+           class="btn gold">
+            CHAT WITH US ON WHATSAPP
+        </a>
 
-</div>
+    </div>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>
-© 2026 Metal Matrimony. All Rights Reserved.
-</p>
+    <p>
+        © 2026 Metal Matrimony. All Rights Reserved.
+    </p>
 
-<p>
-Quality is my priority • Luxurious Designs & Aesthetics • Long Lasting Joints
-</p>
+    <p>
+        Quality is my priority • Luxurious Designs & Aesthetics • Long Lasting Joints
+    </p>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
+<!-- FLOATING WHATSAPP BUTTON -->
 
-<a class="whatsapp"
-href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony,%20I%20would%20like%20to%20make%20an%20inquiry."
-target="_blank"
-aria-label="Chat on WhatsApp">
-
-WA
-
+<a
+    href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony.%20I%20would%20like%20to%20make%20an%20inquiry."
+    class="whatsapp"
+    target="_blank"
+    aria-label="Chat with Metal Matrimony on WhatsApp">
+    WA
 </a>
 
 </body>
