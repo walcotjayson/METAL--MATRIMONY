@@ -11,7 +11,11 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -21,7 +25,7 @@
     }
 
     header {
-      background: #111;
+      background: #111111;
       padding: 20px 7%;
       display: flex;
       justify-content: space-between;
@@ -29,7 +33,7 @@
       border-bottom: 1px solid #333;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
     }
 
     .logo {
@@ -58,11 +62,13 @@
       display: flex;
       align-items: center;
       padding: 70px 7%;
-      background: linear-gradient(120deg, #080808, #1b1b1b);
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+        linear-gradient(120deg, #080808, #1b1b1b);
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 700px;
     }
 
     .hero h1 {
@@ -76,7 +82,7 @@
     }
 
     .hero p {
-      color: #ccc;
+      color: #cccccc;
       font-size: 18px;
       margin-bottom: 30px;
     }
@@ -84,16 +90,18 @@
     .btn {
       display: inline-block;
       background: #d4af37;
-      color: #000;
+      color: #000000;
       padding: 14px 25px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
-      margin-right: 10px;
+      margin: 5px 8px 5px 0;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: white;
+      background: #ffffff;
+      transform: translateY(-2px);
     }
 
     section {
@@ -107,15 +115,17 @@
 
     .section-title h2 {
       font-size: 35px;
+      margin-bottom: 8px;
     }
 
     .section-title p {
-      color: #aaa;
+      color: #aaaaaa;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+      justify-content: center;
       gap: 30px;
     }
 
@@ -146,10 +156,11 @@
     .product-info h3 {
       color: #d4af37;
       margin-bottom: 10px;
+      font-size: 22px;
     }
 
     .product-info p {
-      color: #bbb;
+      color: #bbbbbb;
       margin-bottom: 18px;
     }
 
@@ -164,6 +175,12 @@
       padding: 30px;
       border-radius: 10px;
       border: 1px solid #292929;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      border-color: #d4af37;
+      transform: translateY(-4px);
     }
 
     .service h3 {
@@ -172,18 +189,18 @@
     }
 
     .service p {
-      color: #bbb;
+      color: #bbbbbb;
     }
 
     .about {
-      background: #111;
+      background: #111111;
       text-align: center;
     }
 
     .about p {
       max-width: 750px;
       margin: auto;
-      color: #ccc;
+      color: #cccccc;
       font-size: 17px;
     }
 
@@ -192,7 +209,7 @@
     }
 
     .contact p {
-      color: #bbb;
+      color: #bbbbbb;
       margin: 10px 0;
     }
 
@@ -200,26 +217,41 @@
       background: #050505;
       text-align: center;
       padding: 25px;
-      color: #888;
-      border-top: 1px solid #222;
+      color: #888888;
+      border-top: 1px solid #222222;
     }
 
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
         gap: 12px;
       }
 
+      nav {
+        text-align: center;
+      }
+
       nav a {
-        margin: 0 7px;
+        margin: 0 6px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 70vh;
+        padding: 60px 7%;
       }
 
       .hero h1 {
         font-size: 40px;
       }
 
-      .hero {
-        min-height: 70vh;
+      .hero p {
+        font-size: 16px;
+      }
+
+      .product img {
+        height: 300px;
       }
     }
   </style>
@@ -227,146 +259,227 @@
 
 <body>
 
-<header>
-  <div class="logo">
-    METAL <span>MATRIMONY</span>
-  </div>
+  <!-- HEADER -->
+  <header>
 
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <div class="logo">
+      METAL <span>MATRIMONY</span>
+    </div>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>
-      Luxury <span>Metal</span><br>
-      Welding & Fabrication
-    </h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <p>
-      We create strong, elegant and durable metal furniture,
-      structures and custom fabrication solutions.
-    </p>
+  </header>
 
-    <a class="btn" href="#products">View Our Work</a>
 
-    <a class="btn"
-       href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony%2C%20I%20would%20like%20to%20request%20a%20quote.">
-       WhatsApp Us
-    </a>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
 
-<section id="products">
+    <div class="hero-content">
 
-  <div class="section-title">
-    <h2>Featured Work</h2>
-    <p>Quality craftsmanship. Luxury designs. Long-lasting joints.</p>
-  </div>
+      <h1>
+        Luxury <span>Metal</span><br>
+        Welding & Fabrication
+      </h1>
 
-  <div class="products">
+      <p>
+        We create strong, elegant and durable metal furniture,
+        structures and custom fabrication solutions.
+      </p>
 
-    <div class="product">
+      <a class="btn" href="#products">
+        View Our Work
+      </a>
 
-      <img src="8516aa6037e7977f71513ec648ff8759.jpg"
-           alt="Modern Metal Bar Chairs">
+      <a class="btn"
+         href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony%2C%20I%20would%20like%20to%20request%20a%20quote.">
+        WhatsApp Us
+      </a>
 
-      <div class="product-info">
+    </div>
 
-        <h3>Modern Metal Bar Chairs</h3>
+  </section>
 
-        <p>
-          Premium metal-frame bar chairs designed for homes,
-          restaurants, pubs, offices and commercial spaces.
-          Custom designs available.
-        </p>
 
-        <a class="btn"
-           href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony%2C%20I%20am%20interested%20in%20the%20Modern%20Metal%20Bar%20Chairs.">
-           Request a Quote
-        </a>
+  <!-- PRODUCTS -->
+  <section id="products">
+
+    <div class="section-title">
+
+      <h2>Featured Work</h2>
+
+      <p>
+        Quality craftsmanship. Luxury designs. Long-lasting joints.
+      </p>
+
+    </div>
+
+
+    <div class="products">
+
+      <!-- PRODUCT 1 -->
+      <div class="product">
+
+        <img
+          src="./8516aa6037e7977f71513ec648ff8759.jpg"
+          alt="Modern Metal Bar Chairs"
+        >
+
+        <div class="product-info">
+
+          <h3>Modern Metal Bar Chairs</h3>
+
+          <p>
+            Premium metal-frame bar chairs designed for homes,
+            restaurants, pubs, offices and commercial spaces.
+            Custom designs available.
+          </p>
+
+          <a
+            class="btn"
+            href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony%2C%20I%20am%20interested%20in%20the%20Modern%20Metal%20Bar%20Chairs."
+          >
+            Request a Quote
+          </a>
+
+        </div>
 
       </div>
+
     </div>
 
-  </div>
-</section>
+  </section>
 
-<section id="services">
 
-  <div class="section-title">
-    <h2>Our Services</h2>
-    <p>Professional fabrication solutions built to last.</p>
-  </div>
+  <!-- SERVICES -->
+  <section id="services">
 
-  <div class="services">
+    <div class="section-title">
 
-    <div class="service">
-      <h3>Metal Furniture</h3>
+      <h2>Our Services</h2>
+
       <p>
-        Custom tables, chairs, shelves, racks and other
-        modern metal furniture.
+        Professional fabrication solutions built to last.
       </p>
+
     </div>
 
-    <div class="service">
-      <h3>Welding & Fabrication</h3>
+
+    <div class="services">
+
+      <div class="service">
+
+        <h3>Metal Furniture</h3>
+
+        <p>
+          Custom tables, chairs, shelves, racks and other
+          modern metal furniture.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>Welding & Fabrication</h3>
+
+        <p>
+          Strong and precise welding for custom metal projects
+          and structural fabrication.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>Shop & Office Structures</h3>
+
+        <p>
+          Counters, frames, displays and other commercial
+          metal structures.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <h3>Repairs</h3>
+
+        <p>
+          Reliable repair and modification of metal structures
+          and equipment.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+
+    <div class="section-title">
+
+      <h2>About Metal Matrimony</h2>
+
+    </div>
+
+    <p>
+      Metal Matrimony is a welding and fabrication brand focused
+      on quality craftsmanship, luxurious designs and durable
+      metalwork. We turn ideas into practical and beautiful
+      products for homes, businesses and commercial spaces.
+    </p>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <div class="section-title">
+
+      <h2>Let's Build Something</h2>
+
       <p>
-        Strong and precise welding for custom metal projects
-        and structural fabrication.
+        Have a design or project in mind? Talk to us.
       </p>
+
     </div>
 
-    <div class="service">
-      <h3>Shop & Office Structures</h3>
-      <p>
-        Counters, frames, displays and other commercial
-        metal structures.
-      </p>
-    </div>
+    <p>📞 0701 355 748</p>
 
-    <div class="service">
-      <h3>Repairs</h3>
-      <p>
-        Reliable repair and modification of metal structures
-        and equipment.
-      </p>
-    </div>
+    <p>✉️ walcotjayson04@gmail.com</p>
 
-  </div>
-</section>
+    <p>Instagram: @metalmatrimony</p>
 
-<section id="about" class="about">
+    <br>
 
-  <div class="section-title">
-    <h2>About Metal Matrimony</h2>
-  </div>
+    <a
+      class="btn"
+      href="https://wa.me/254701355748?text=Hello%20Metal%20Matrimony%2C%20I%20would%20like%20to%20discuss%20a%20project."
+    >
+      Chat on WhatsApp
+    </a>
 
-  <p>
-    Metal Matrimony is a welding and fabrication brand focused
-    on quality craftsmanship, luxurious designs and durable
-    metalwork. We turn ideas into practical and beautiful
-    products for homes, businesses and commercial spaces.
-  </p>
+  </section>
 
-</section>
 
-<section id="contact" class="contact">
+  <!-- FOOTER -->
+  <footer>
 
-  <div class="section-title">
-    <h2>Let's Build Something</h2>
-    <p>Have a design or project in mind? Talk to us.</p>
-  </div>
+    © 2026 Metal Matrimony — Quality Is My Priority.
 
-  <p>📞 0701 355 748</p>
-  <p>✉️ walcotjayson04@gmail.com</p>
-  <p>Instagram: @metalmatrimony</p>
+  </footer>
 
-  <br>
 
-  <a class="btn"
-     href="https://wa.me/254701355748?text=
+</body>
+</html>
